@@ -40,7 +40,7 @@ pipeline{
                     tenantIdVariable: 'ARM_TENANT_ID'
                 ), string(credentialsId: 'access_key', variable: 'ARM_ACCESS_KEY')]) {
                         
-                        sh terraform validate
+                        sh('echo "terraform validate" terraform validate')
                            }
                     }
              }
