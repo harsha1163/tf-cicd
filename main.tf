@@ -8,6 +8,7 @@ terraform {
     required_providers  {
         azurerm =   {
             source  =   "hashicorp/azurerm"
+            version = "=2.46.0"
         }
     }
     backend "azurerm" {
@@ -32,8 +33,8 @@ provider "azurerm" {
 
 
 
-
-provider "azuread" {
+/*
+ provider "azuread" {
     version         =   ">= 0.11"
     client_id       =   var.client_id
     client_secret   =   var.client_secret
@@ -66,7 +67,7 @@ provider "azuread" {
 // module "provisioners" {
 //     source  =   "./azure/provisioners-example"
 // }
-
+*/
 module "linuxvm" {
      source  =   "./azure/linuxVM"
 }
