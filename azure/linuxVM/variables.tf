@@ -36,7 +36,7 @@ variable "tags" {
     description =   "Resouce tags"
     type        =   map(string)
     default     =   {
-        "author"        =   "Vamsi"
+        "author"        =   "Harsha"
         "deployed_with" =   "Terraform"
     }
 }
@@ -77,7 +77,7 @@ variable "allocation_method" {
 variable "virtual_machine_size" {
     description =   "Size of the VM"
     type        =   string
-    default     =   "Standard_B1s"
+    default     =   "Standard_B1ls"
 }
 
 variable "computer_name" {
