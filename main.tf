@@ -10,6 +10,12 @@ terraform {
             source  =   "hashicorp/azurerm"
         }
     }
+    backend "azurerm" {
+        resource_group_name  = "tfstate"
+        storage_account_name = "<storage_account_name>"
+        container_name       = "tstate"
+        key                  = "terraform.tfstate"
+    }
 }
 
 # Provider Block
@@ -61,7 +67,7 @@ provider "azuread" {
 //     source  =   "./azure/provisioners-example"
 // }
 
-// module "linuxvm" {
-//     source  =   "./azure/linuxVM"
-// }
+module "linuxvm" {
+     source  =   "./azure/linuxVM"
+}
 
